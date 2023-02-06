@@ -6,11 +6,10 @@ Computer Vision model for Post Estimation
 <hr>
 
 <p align="center">
-  <img width="640" height="360" src="https://www.computervision.zone/wp-content/uploads/2021/04/vlcsnap-2021-03-27-22h34m51s546.jpg">
+  <img width="640" height="500" src="https://github.com/infiniai-tech/infiniai/blob/main/Results/pose.png">
 </p>
 
 <pre>
-
 from infiniai.PoseEstimationModule import poseDetector
 import cv2
 import time
@@ -21,7 +20,7 @@ detector = poseDetector()
 
 while True:
 
-    success, img = cap.read( )
+    success, img = cap.read()
     img = detector.findPose(img)
     lmList = detector.findPosition(img, draw=False)
 
